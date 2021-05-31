@@ -12,7 +12,7 @@ from wordwise import Extractor
 
 
 def length_count(sentence):
-    a = sentence.split() #利用split()方法对字符进行切片
+    a = sentence.split() 
     num = len(a)
     return num
 
