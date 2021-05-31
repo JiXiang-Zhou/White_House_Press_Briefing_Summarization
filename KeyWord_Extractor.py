@@ -8,16 +8,10 @@ from keybert import KeyBERT
 from wordwise import Extractor
 
 
-# In[5]:
-
-
 def length_count(sentence):
     a = sentence.split() 
     num = len(a)
     return num
-
-
-# In[40]:
 
 
 def press_briefing_extractor_short(doc):
@@ -35,18 +29,12 @@ def press_briefing_extractor_short(doc):
     return keywords
 
 
-# In[27]:
-
-
 def words_to_sentences(words):
     length = len(words)
     sentence=''
     for i in range(0,length):
         sentence = sentence+' '+words[i]
     return sentence
-
-
-# In[48]:
 
 
 def long_paragraph_split(paragraph,length = 400):
@@ -59,10 +47,6 @@ def long_paragraph_split(paragraph,length = 400):
         i=i+length
     return splited_paragraph
 
-
-# In[51]:
-
-
 def press_briefing_extractor(doc ,length_limit = 400):
     if length_count(doc)<=length_limit:
         keywords = press_briefing_extractor_short(doc)
@@ -74,10 +58,6 @@ def press_briefing_extractor(doc ,length_limit = 400):
             keywords = list(set(keywords))
             
     return keywords
-
-
-# In[ ]:
-
 
 
 
