@@ -54,7 +54,7 @@ def press_briefing_extractor(doc ,length_limit = 400):
             keywords = keywords + press_briefing_extractor_short(splited_sentence)
             keywords = list(set(keywords))
             
-        return keywords
+     return keywords
 
 
 
