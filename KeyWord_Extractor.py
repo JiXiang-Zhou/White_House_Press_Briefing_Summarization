@@ -1,23 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 from keybert import KeyBERT
 from wordwise import Extractor
 
 
-# In[5]:
-
-
 def length_count(sentence):
-    a = sentence.split() #利用split()方法对字符进行切片
+    a = sentence.split() 
     num = len(a)
     return num
-
-
-# In[40]:
 
 
 def press_briefing_extractor_short(doc):
@@ -34,19 +25,12 @@ def press_briefing_extractor_short(doc):
     keywords = list(set(keywords))
     return keywords
 
-
-# In[27]:
-
-
 def words_to_sentences(words):
     length = len(words)
     sentence=''
     for i in range(0,length):
         sentence = sentence+' '+words[i]
     return sentence
-
-
-# In[48]:
 
 
 def long_paragraph_split(paragraph,length = 400):
@@ -58,9 +42,6 @@ def long_paragraph_split(paragraph,length = 400):
         splited_paragraph.append(words_to_sentences(words[i:i+length]))
         i=i+length
     return splited_paragraph
-
-
-# In[51]:
 
 
 def press_briefing_extractor(doc ,length_limit = 400):
@@ -75,8 +56,6 @@ def press_briefing_extractor(doc ,length_limit = 400):
             
         return keywords
 
-
-# In[ ]:
 
 
 
