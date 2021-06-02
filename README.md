@@ -9,7 +9,7 @@ in the file core.py, change the code 'from utils import get_all_candidates, squa
 
 Not changing it may not cause problem in all users. But at least, in my case, there's this issue
 
-# about my model
+# About my model
 The model first separate questions from reporters and answers by press secratry. Then my model use Bertkey and wordwise to extract keyword 
 from questions by reporters. Users input a search word. Using word vector similarity, the model will match the earch word with keywords.
 If it matches, the corresponding answers will be included into a 'related answers'. In the end, the bert summary model is used to summarize
